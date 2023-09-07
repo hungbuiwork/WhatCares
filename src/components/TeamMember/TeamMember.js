@@ -1,14 +1,13 @@
 import React from "react";
 import sample_image from "../../imgs/honduras2017/12.JPG";
 
-export const TeamMember = () => {
-  let name = "Hao Bui"; //name is UNIQUE. Will be used as ID
-  let cred = "MD";
-  let image1;
-  let image2;
-  let desc =
-    "of the family Elephantidae and the order Proboscidea. Three living species are recognised: the African bush elephant, the African forest elephant, and the Asian elephant (all pictured). Distinctive features of elephants include a long, flexible proboscis (trunk), long tusks, large ear flaps, pillar-like legs, and grey skin. They are herbivorous, and stay near water when it is accessible. Females (cows) tend to live in family groups, which can consist of one female with her calves or several related females with offspring. After reaching adulthood, males (bulls) live separately, either alone or with other males. Elephants communicate by touch, sight, smell, and sound. Threats to their populations include poaching for their ivory tusks, habitat destruction, and conflicts with local people. Elephants are iconic in huma";
-
+export const TeamMember = (props) => {
+  let member = props.member;
+  let name = member.name;
+  let cred = member.cred;
+  let image1 = member.image1;
+  let image2 = member.image2
+  let desc = member.desc;
   return (
     <div>
       <label for={name} className=" cursor-zoom-in">

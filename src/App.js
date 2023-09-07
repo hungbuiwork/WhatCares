@@ -8,6 +8,7 @@ import ImageCarousel from './components/ImageCarousel/ImageCarousel';
 import { Footer } from './sections/Footer/Footer';
 import { Partners } from './sections/Partners/Partners';
 import {Team} from './sections/Team/Team';
+import Donate from './sections/Donate/Donate';
 
 localStorage.theme = 'light'
 
@@ -21,6 +22,7 @@ function App() {
         <Projects></Projects>
         <Team></Team>
         <Partners></Partners>
+        <Donate></Donate>
       </div>
       <Footer></Footer>
 
