@@ -1,5 +1,5 @@
 import React from "react";
-import sample_image from "../../imgs/honduras2017/12.JPG";
+import sample_image from "../../imgs/team/carlos.jpg";
 
 export const TeamMember = (props) => {
   let member = props.member;
@@ -10,20 +10,20 @@ export const TeamMember = (props) => {
   let desc = member.desc;
   return (
     <div>
-      <label for={name} className=" cursor-zoom-in">
+      <label for={name} className=" cursor-zoom-in relative bottom-0 hover:bottom-6 duration-300">
         <div className="m-2 md:m-3">
-          <div className="card w-32 h-48 md:w-48 md:h-64 bg-base-100 shadow-xl drop-shadow-dark-2">
+          <div className="card w-48 h-64 md:w-64 md:h-96 bg-base-100 shadow-xl drop-shadow-dark-2">
             <figure
-              className=" h-full bg-transparent"
+              className=" h-48 md:h-72 bg-transparent"
               style={{
-                backgroundImage: `url(${sample_image})`,
+                backgroundImage: `url(${image1})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
             ></figure>
             <div className="card-body py-3">
               <h1 className="card-title m-auto leading-none text-base md:text-xl">
-                {name} ({cred})
+                {name} {cred && "("}{cred}{cred && ")"}
               </h1>
             </div>
           </div>
@@ -34,11 +34,11 @@ export const TeamMember = (props) => {
       <div class="modal">
         <div class="modal-box">
           <h3 class="text-3xl font-bold mb-6">
-            {name} ({cred})
+            {name} {cred && "("}{cred}{cred && ")"}
           </h3>
 
           <div>
-            <img src={sample_image} className=" w-6/12 float-left mr-3"></img>
+            <img src={image1} className=" w-6/12 float-left mr-3"></img>
             <p class="py-4 text-left">{desc}</p>
           </div>
         </div>
