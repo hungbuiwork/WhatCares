@@ -10,23 +10,23 @@ export const Projects = () => {
   const [vietnam, setVietnam] = useState(false);
 
   return (
-    <div className= "my-16 bg-white">
+    <div className= "py-16 bg-gradient-1">
       <a className=" relative bottom-20" id="projects"></a>
-      <h1 className=" text-8xl pt-8 underline decoration-blue-600 leading-relaxed">
+      <h1 className=" text-6xl text-white md:text-8xl pt-8 leading-relaxed mb-3">
         Projects
       </h1>
-      <h2 className="text-2xl text-blue-500 mx-8 lead mb-8" >Overseas missions to provide medical care, medical education, and supplies to underserved communities.</h2>
+      <h2 className="text-2xl mx-8 leading-tight mb-8" >Overseas missions to provide medical care, medical education, and supplies to underserved communities.</h2>
 
       <div className=" flex justify-center flex-wrap">
         {!honduras && (
-          <Slide className="w-96 bg-base-100 shadow-xl m-8 drop-shadow-dark-2">
+          <Slide className="w-96 bg-base-100 shadow-xl m-8 drop-shadow-dark-2 rounded-3xl">
             <div className="card">
               <figure className=" h-96 w-auto">
                 <img src={hondurasImage} alt="Shoes" className=" min-h-max min-w-max"/>
               </figure>
               <div className="card-body">
-                <h2 className="card-title">HONDURAS</h2>
-                <p>Year-round ulcer treatment program in Honduras</p>
+                <h2 className="card-title text-4xl self-center">HONDURAS</h2>
+                <p>Year-round ulcer treatment program.</p>
                 <div className={"card-actions justify-end"}>
                   <a href="#honduras">
                     <button
@@ -42,7 +42,7 @@ export const Projects = () => {
           </Slide>
         )}
         {honduras && (
-          <div className="w-full bg-base-100 shadow-xl m-8 drop-shadow-dark-2 p-8">
+          <div className="w-full bg-base-100 shadow-xl m-8 drop-shadow-dark-2 p-8 rounded-3xl">
             <a className=" relative bottom-20" id="honduras"></a>
             <div className="flex justify-start">
               <button
@@ -56,7 +56,7 @@ export const Projects = () => {
             {false && <ImageCarousel></ImageCarousel>}
             <div className="sm:px-4 md:px-12 py-6 indent-8 text-left">
               <h1 className=" text-2xl text-center">Honduras Vein Week</h1>
-              <p>
+              <p className=" leading-relaxed text-md">
                 Honduras Vein Week, sponsored by the Hackett Hemwell Patterson
                 Foundation every March, is dedicated to treating over 1500
                 Honduran patients annually who suffer from painful varicose
@@ -82,14 +82,14 @@ export const Projects = () => {
         )}
 
         {!vietnam && (
-          <Slide className=" w-96 bg-base-100 shadow-xl m-8 drop-shadow-dark-2"> 
-            <div className="card">
+          <Slide className=" w-96 bg-base-100 shadow-xl m-8 drop-shadow-dark-2 rounded-3xl"> 
+            <div className="card ">
               <figure className=" h-96">
                 <img src={vietnamImage} alt="Vietnam Image" className=" min-h-max min-w-max"/>
               </figure>
               <div className="card-body">
-                <h2 className="card-title">VIETNAM</h2>
-                <p>Establishing vascular care in Vietnam.</p>
+                <h2 className="card-title text-4xl self-center">VIETNAM</h2>
+                <p>Furthering vascular care in Vietnam.</p>
                 <div className="card-actions justify-end">
                   <a href="#vietnam">
                     <button
@@ -107,7 +107,7 @@ export const Projects = () => {
         )}
 
         {vietnam && (
-          <div className="w-full bg-base-100 shadow-xl m-8 drop-shadow-dark-2 p-8">
+          <div className="w-full bg-base-100 shadow-xl m-8 drop-shadow-dark-2 p-8 rounded-3xl">
             <a className=" relative bottom-20" id="vietnam"></a>
             <div className="flex justify-start">
               <button
@@ -124,7 +124,7 @@ export const Projects = () => {
               <h1 className="text-2xl text-center">
                 Training and equipping local physicians
               </h1>
-              <p>
+              <p className=" leading-relaxed text-md">
                 Dr Hao Bui is committed to improving vascular care in Vietnam
                 though education exchanges. WHAT firmly believes in the power of
                 sustainable healthcare access for underserved regions through
@@ -145,25 +145,7 @@ export const Projects = () => {
         )}
       </div>
 
-      <div className="">
-        <h1 className=" text-bold text-6xl">
-          Want To <span className=" text-orange-600">Help Out?</span>
-        </h1>
-
-        <Link
-          activeClass="active"
-          to="contribute"
-          spy={true}
-          smooth={true}
-          offset={-100}
-          duration={500}
-        >
-          <button className="m-4 text-white btn hover:translate-y-2 bg-orange-600 hover:text-orange-600 text-xl border-2">
-            {" "}
-            Start Contributing Today ↓{" "}
-          </button>
-        </Link>
-      </div>
+      
     </div>
   );
 };

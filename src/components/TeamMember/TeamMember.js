@@ -12,7 +12,7 @@ export const TeamMember = (props) => {
     <div>
       <label for={name} className=" cursor-zoom-in relative bottom-0 hover:bottom-6 duration-300">
         <div className="m-2 md:m-3">
-          <div className="card w-48 h-64 md:w-64 md:h-96 bg-base-100 shadow-xl drop-shadow-dark-2">
+          <div className="card w-36 h-64 md:w-64 md:h-96 bg-base-100 shadow-xl drop-shadow-dark-2">
             <figure
               className=" h-48 md:h-72 bg-transparent"
               style={{

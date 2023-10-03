@@ -5,10 +5,10 @@ import { Slide } from "../animations/Slide.tsx";
 
 export const Team = () => {
   return (
-    <div className=" mt-16">
+    <div className=" py-16">
       <a className=" relative bottom-20" id="team"></a>
       <Slide>
-        <h1 className=" text-8xl underline decoration-blue-500 leading-relaxed">
+        <h1 className=" text-6xl md:text-8xl  leading-tight">
           Meet the Team
         </h1>
         <h2 className="text-2xl text-blue-500 mx-8 lead mb-8">

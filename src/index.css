@@ -26,7 +26,7 @@ p {
   line-height: 2rem;
 }
 
-h1, h2, h3 {
+h1, h2, h3, li {
   font-family: 'Oswald', sans-serif;
 
 }
@@ -56,8 +56,20 @@ code {
 background: linear-gradient(0deg, rgba(4,0,79,0) 0%, rgba(255,255,255,0.7849681032794064) 40%, rgba(255,255,255,1) 100%);
 }
 
+.bg-gradient-1{
+  background-image: linear-gradient(to top, #48a4ef6c 0 3%,  #48a4ef92 3% 7%,  #48a4efcb 7% 11%, #48a4ef 11% 14%, #6f86d6 88% 91%, #6f85d6d9 91% 94%,  #6f85d6a9 94% 97%,  #6f85d653 97% 100%);
+}
+
+Link{
+  font-family: 'Oswald', sans-serif;
+}
+
 @layer components
 {
+
+  .highlight {
+    @apply font-semibold text-blue-500 ;
+  }
   #imagepreload::after{
     position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
     content: url(imgs/honduras2017/12.JPG) url(imgs/honduras2017/14.JPG) url(imgs/honduras2017/15.JPG) url(imgs/honduras2019/24.jpg);
@@ -65,7 +77,7 @@ background: linear-gradient(0deg, rgba(4,0,79,0) 0%, rgba(255,255,255,0.78496810
   }
   #introimages{
     @apply bg-cover bg-center bg-no-repeat;
-    background-image: url(imgs/honduras2017/12.JPG);
+    background-image:  url(imgs/honduras2017/12.JPG);
     background-size: cover;
     transition: 5s, background-size none;
     animation-name: animate;
@@ -76,6 +88,7 @@ background: linear-gradient(0deg, rgba(4,0,79,0) 0%, rgba(255,255,255,0.78496810
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     animation-delay:  8s;
+    
   }
 
   @keyframes animate {
@@ -89,7 +102,7 @@ background: linear-gradient(0deg, rgba(4,0,79,0) 0%, rgba(255,255,255,0.78496810
       background-image: url(imgs/honduras2017/15.JPG);
     }
     75%{
-      background-image: url(imgs/honduras2019/24.jpg);
+      background-image: url(imgs/honduras2019/11.jpg);
     }
     100%{
       background-image: url(imgs/honduras2017/12.JPG);

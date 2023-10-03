@@ -12,8 +12,8 @@ const Intro = () => (
 
       </Slide>
 
-      <div className="flex w-[100%] lg:w-[50%]  h-[100vh] justify-center flex-col  lg:static relative bottom-[100vh]">
-        <div className="rounded-xl bg-gradient-to-b from-white to-transparent p-8 drop-shadow-dark lg:drop-shadow-none h-[60vh] w-[50vw] mx-auto mt-[60vh] lg:m-auto">
+      <div className="flex w-[100%] lg:w-[50%]  h-[100vh]  flex-col  lg:static relative bottom-[100vh]">
+        <div className="rounded-xl bg-white p-8 drop-shadow-xl mx-auto mt-[40vh] lg:m-auto relative lg:right-24">
           <h1 className=" font-extrabold text-6xl lg:text-7xl text-left">
             <div className="flex">
               <span className=" text-blue-500">

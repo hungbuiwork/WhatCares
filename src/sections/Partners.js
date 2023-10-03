@@ -5,7 +5,7 @@ export const Partners = () => {
   return (
     <div className=" my-16">
       <div className="">
-        Partner section coming Soon
+        "Partner" section coming soon ...
         {partners.map((partner) => {
           return (
             <div>
