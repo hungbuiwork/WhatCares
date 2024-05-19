@@ -9,7 +9,7 @@ const team = [
     image2: require("../imgs/honduras2017/1.JPG"),
   },
   {
-    name: "Alan Greenburg",
+    name: "Alan Greenberg",
     cred: "MD",
     desc: "Allan Greenberg's family is originally from Honduras, and he has a great passion for giving back to his country and heritage. Allan has been involved in medical sales since 1990 and more specifically has been involved with Vascular Surgery since 1998. Over the last several years Allan has worked closely with Dr. Hao Bui. It was through their passion for for medical mission work that Allan and Dr Bui founded WHAT in 2015 to develop medical mission projects in Honduras and Vietnam. With almost 20 years of vascular experience, Allan has been able to provide needed medical assistance to patients, and through his extensive vascular knowledge and network has directly educated and set up opportunities for Third World physicians to learn more ad- vanced technologies to better serve their own communities.",
     image1: require("../imgs//team/alan.jpg"),
