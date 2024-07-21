@@ -100,12 +100,6 @@ export const About = () => {
         </Slide>
       </div>
 
-      <Slide>
-        <div className=" mb-8 text-xl leading-10">
-          <h1 className=" text-5xl">Our Contributions</h1>
-          <p className=" text-md leading-relaxed">Section Coming Soon...</p>
-        </div>
-      </Slide>
     </div>
   );
 };

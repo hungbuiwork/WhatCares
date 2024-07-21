@@ -3,9 +3,9 @@ import partners from "../data/partners";
 
 export const Partners = () => {
   return (
-    <div className=" my-16">
+    <div className="">
       <div className="">
-        "Partner" section coming soon ...
+      
         {partners.map((partner) => {
           return (
             <div>

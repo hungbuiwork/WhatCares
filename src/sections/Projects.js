@@ -42,7 +42,7 @@ export const Projects = () => {
           </Slide>
         )}
         {honduras && (
-          <div className="w-full bg-base-100 shadow-xl m-8 drop-shadow-dark-2 p-8 rounded-3xl">
+          <div className="w-full bg-base-100 shadow-xl my-8 mx-2 drop-shadow-dark-2 p-8 rounded-3xl">
             <a className=" relative bottom-20" id="honduras"></a>
             <div className="flex justify-start">
               <button
@@ -107,7 +107,7 @@ export const Projects = () => {
         )}
 
         {vietnam && (
-          <div className="w-full bg-base-100 shadow-xl m-8 drop-shadow-dark-2 p-8 rounded-3xl">
+          <div className="w-full bg-base-100 shadow-xl my-8 mx-2 drop-shadow-dark-2 p-8 rounded-3xl">
             <a className=" relative bottom-20" id="vietnam"></a>
             <div className="flex justify-start">
               <button

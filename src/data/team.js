@@ -9,11 +9,17 @@ const team = [
     image2: require("../imgs/honduras2017/1.JPG"),
   },
   {
-    name: "Alan Greenberg",
-    cred: "MD",
+    name: "Allan Greenberg",
     desc: "Allan Greenberg's family is originally from Honduras, and he has a great passion for giving back to his country and heritage. Allan has been involved in medical sales since 1990 and more specifically has been involved with Vascular Surgery since 1998. Over the last several years Allan has worked closely with Dr. Hao Bui. It was through their passion for for medical mission work that Allan and Dr Bui founded WHAT in 2015 to develop medical mission projects in Honduras and Vietnam. With almost 20 years of vascular experience, Allan has been able to provide needed medical assistance to patients, and through his extensive vascular knowledge and network has directly educated and set up opportunities for Third World physicians to learn more ad- vanced technologies to better serve their own communities.",
     image1: require("../imgs//team/alan.jpg"),
     image2: require("../imgs/honduras2017/1.JPG"),
+  },
+  {
+
+    name: "NavYash Gupta",
+    cred: "MD",
+    desc: "Dr. NavYash Gupta is an Associate Professor of Surgery at Cedars Sinai Medical center and Medical Director of the Venous Program. He came to Cedars Sinai in July of 2017. Before coming to Cedars Sinai Dr. Gupta served as Chief of the Division of Vascular Surgery at NorthShore University HealthSystem in Evanston, Illinois from 2009 to 2017. Prior to that he was a faculty member and an Assistant Professor of Surgery from 2000-2009. Dr. Gupta has been involved in clinical and translational research throughout his career resulting in over 50 peer-reviewed publications and reports, multiple reviews, 10 book chapters and over 40 abstracts from national and international meetings. He has given numerous invited talks and has been a mentor for over 30 pre-medical students. Among his other honors are the Patient Choice Award (multiple years), Compassionate Doctor Recognition (multiple years), Excellence in Teaching Award from the University of Chicago (2014) and being recognized as a Top Doctor by Los Angeles Magazine and A Southern California Super Doctor for multiple years. Dr. Gupta is certified by the American Board of Surgery with a certificate of special qualifications in Vascular Surgery and is a Fellow of the American College of Surgeons. He is a member of numerous professional societies, and he was appointed Clinical Chief of Vascular Surgery at Cedars Sinai Medical Center starting in January of 2023.",
+    image1: require("../imgs//team/gupta.jpg"),
   },
   {
     name: "Lindy McHutchison",
