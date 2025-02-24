@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <Navigation></Navigation>
-      <div className=" relative bottom-24">
+      <div className=" relative ">
         <Intro></Intro>
         <About></About>
         <Projects></Projects>
@@ -36,10 +36,7 @@ function App() {
             duration={500}
             className="m-4 text-white btn hover:translate-y-2 bg-orange-600 hover:text-orange-600 text-xl border-2"
           >
-            <button >
-              {" "}
-              Start Contributing Today ↓{" "}
-            </button>
+            <button> Start Contributing Today ↓ </button>
           </Link>
         </div>
         <Team></Team>

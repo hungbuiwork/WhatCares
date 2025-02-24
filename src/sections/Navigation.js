@@ -1,59 +1,165 @@
-import React from 'react';
-import { Link } from 'react-scroll';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-scroll";
 
+const Navigation = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-const Navigation = () => (
-  <div className=' z-10 sticky float py-4 h-36 top-0 gradient-nav px-2'>
-<div className="navbar">
-  <div className="navbar-start">
-    <div className="dropdown">
-      <label tabIndex={0} className="btn btn-ghost md:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-      </label>
-      <ul tabIndex={0} className="menu menu-lg dropdown-content mt-3 z-[1] p-2 bg-base-100 rounded-box w-52">
-        <li><Link activeClass="active" to="mission" spy={true} smooth={true} offset={-36} duration={500}>Our Mission</Link></li>
-        <li><Link activeClass="active" to="projects" spy={true} smooth={true} offset={-36} duration={500}>Projects</Link></li>
-        <li><Link activeClass="active" to="team" spy={true} smooth={true} offset={-36} duration={500}>Team</Link></li>
-        <li><Link activeClass="active" to="contribute" spy={true} smooth={true} offset={-36} duration={500}>Donate</Link></li>
-        <li><Link activeClass="active" to="contact" spy={true} smooth={true} offset={-36} duration={500}>Contact Us</Link></li>
-      </ul>
-    </div>
-    <Link className=' cursor-pointer' activeClass="active" to="main" spy={true} smooth={true} offset={-36} duration={500}>
-      <img src={require('../imgs/icons/logo.png')} className=' h-24 w-auto hidden md:block'></img>
-    </Link>
+  const navItems = [
+    { name: "Our Mission", to: "mission" },
+    { name: "Projects", to: "projects" },
+    { name: "Team", to: "team" },
+    { name: "Donate", to: "contribute" },
+  ];
 
-    <a className="btn btn-ghost normal-case text-5xl" href='#main'>
-      <h1 className=' hidden xl:inline'>
-      <span className = "font-bold text-blue-600">What</span>Cares
-      </h1>
-    </a>
-  </div>
-  <div className="navbar-center hidden md:flex">
-    <ul className="menu menu-horizontal px-1 text-lg items-center">
-      <li class = "hover:border-blue-400 border-b-2 border-transparent duration-100 text-gray-700"><Link activeClass="active" to="mission" spy={true} smooth={true} offset={-36} duration={500}>Our Mission</Link></li>
-      <li class = "hover:border-blue-400 border-b-2 border-transparent duration-100 text-gray-700 "><Link activeClass="active" to="projects" spy={true} smooth={true} offset={-36} duration={500}>Projects</Link></li>
-      <li class = "hover:border-blue-400 border-b-2 border-transparent duration-100 text-gray-700"><Link activeClass="active" to="team" spy={true} smooth={true} offset={-36} duration={500}>Team</Link></li>
-      <li class = "hover:border-blue-400 border-b-2 border-transparent duration-100 text-gray-700"><Link activeClass="active" to="contribute" spy={true} smooth={true} offset={-36} duration={500}>Donate</Link></li> 
-    </ul>
-  </div>
-  <div className="navbar-end">
-    <Link className=' cursor-pointer' activeClass="active" to="main" spy={true} smooth={true} offset={-36} duration={500}>
-    <img src={require('../imgs/icons/logo.png')} className=' h-32 w-auto block md:hidden'></img>
-    </Link>
-    
-    <div className=' hidden md:block'>
-      <Link className=' btn bg-transparent hover:bg-blue-600 hover:text-white text-blue-600 border-2 border-blue-600 hover:border-blue-600 duration-200' activeClass="active" to="contact" spy={true} smooth={true} offset={-100} duration={500}>Contact Us</Link>
-    </div>
-  </div>
-  
-</div>
-  </div>
-);
+  return (
+    <nav
+      className={`fixed w-full z-50 transition-all duration-700 ${
+        isScrolled
+          ? " bg-gradient-to-b from-gray-900 to-transparent"
+          : "bg-gray-900 py-4"
+      }`}
+    >
+      <div
+        className={` transition-all duration-100 mx-auto px-4 sm:px-6 lg:px-8 ${
+          isScrolled ? " " : ""
+        } `}
+      >
+        <div className="flex justify-between items-center ">
+          {/* Logo and Title Container */}
+          <Link
+            to="main"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="hidden md:flex items-center space-x-3 cursor-pointer group"
+          >
+            <div className=" w-40 rounded-lg shadow-sm">
+              <img
+                src={require("../imgs/icons/logo.png")}
+                alt="WhatCares Logo"
+                className=" group-hover:scale-105 transition-transform duration-200"
+              />
+            </div>
+            <div className={`flex flex-col `}>
+              <h1 className="text-7xl font-extrabold  leading-tight">
+                <span className="text-blue-500">What</span>
+                <span className="text-white">Cares</span>
+              </h1>
+              <span
+                className={`text-sm text-gray-100 font-medium ${
+                  isScrolled ? "hidden" : ""
+                }`}
+              >
+                World Health Access Team
+              </span>
+            </div>
+          </Link>
 
-Navigation.propTypes = {};
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.to}
+                to={item.to}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="text-white hover:text-blue-600 font-medium transition-colors duration-200 relative group cursor-pointer"
+              >
+                {item.name}
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200" />
+              </Link>
+            ))}
+            <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="px-6 py-2.5 text-sm font-medium text-white bg-blue-600 rounded-full hover:bg-blue-700 shadow-sm hover:shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            >
+              Contact Us
+            </Link>
+          </div>
 
-Navigation.defaultProps = {};
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 rounded-lg  shadow-sm text-white hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+            >
+              <span className="sr-only">Open menu</span>
+              <div className="w-6 h-6 flex flex-col justify-center space-y-1.5 relative">
+                <span
+                  className={`block w-6 h-0.5 bg-current transform transition duration-300 ${
+                    isOpen ? "rotate-45 translate-y-2" : ""
+                  }`}
+                />
+                <span
+                  className={`block w-6 h-0.5 bg-current transition duration-300 ${
+                    isOpen ? "opacity-0" : ""
+                  }`}
+                />
+                <span
+                  className={`block w-6 h-0.5 bg-current transform transition duration-300 ${
+                    isOpen ? "-rotate-45 -translate-y-2" : ""
+                  }`}
+                />
+              </div>
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        <div
+          className={`md:hidden transition-all duration-300 ease-in-out ${
+            isOpen
+              ? "max-h-96 opacity-100 visible mt-4"
+              : "max-h-0 opacity-0 invisible"
+          }`}
+        >
+          <div className="px-2 pt-2 pb-3 space-y-1 bg-white rounded-lg shadow-lg">
+            {navItems.map((item) => (
+              <Link
+                key={item.to}
+                to={item.to}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="block px-3 py-2 text-base font-medium text-gray-800 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200 cursor-pointer"
+                onClick={() => setIsOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
+            <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="block px-3 py-2 text-base font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-md transition-colors duration-200 cursor-pointer shadow-sm"
+              onClick={() => setIsOpen(false)}
+            >
+              Contact Us
+            </Link>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+};
 
 export default Navigation;
