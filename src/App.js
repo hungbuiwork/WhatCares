@@ -16,30 +16,12 @@ localStorage.theme = "light";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App overflow-hidden">
       <Navigation></Navigation>
-      <div className=" relative ">
+      <div className="">
         <Intro></Intro>
         <About></About>
         <Projects></Projects>
-        <div className="">
-          <h1 className=" text-bold text-6xl p-12">
-            Want To <span className=" text-orange-600">Help Out?</span>
-          </h1>
-
-          <Link
-            activeClass="active"
-            to="contribute"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
-            className="m-4 text-white btn hover:translate-y-2 bg-orange-600 hover:text-orange-600 text-xl border-2"
-          >
-            <button> Start Contributing Today ↓ </button>
-          </Link>
-        </div>
-        <Team></Team>
         <Donate></Donate>
         <Contact></Contact>
       </div>

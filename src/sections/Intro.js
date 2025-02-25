@@ -4,44 +4,29 @@ import cover_image from "../imgs/honduras2017/12.JPG";
 import { Slide } from "../animations/Slide.tsx";
 
 const Intro = () => (
-  <div class="bg-white h-[100vh] mb-8 border-4" id="main">
-    <div className="flex lg:flex-row flex-col">
-      <div id="imagepreload"></div>
-      <div
-        id="introimages"
-        className="shadow-xl w-[100vw] lg:w-[50vw] h-[100vh] object-fill"
-      ></div>
-
-      <div className="flex w-[100%] lg:w-[50%]  h-[100vh]  flex-col  lg:static relative bottom-[100vh]">
-        <div className="rounded-xl bg-white p-8 mx-auto mt-[40vh] lg:m-auto relative lg:right-24">
-          <h1 className=" font-extrabold text-7xl lg:text-9xl text-left">
-            <div className="flex">
-              <span className=" text-blue-500">W</span>
-              orld <br></br>
-            </div>
-            <div className="flex">
-              <span className=" text-blue-500">H</span>
-              ealth
-              <br></br>
-            </div>
-            <div className="flex">
-              <span className=" text-blue-500">A</span>
-              ccess
-              <br></br>
-            </div>
-            <div className="flex">
-              <span className=" text-blue-500">T</span>
-              eam <br></br>
-            </div>
-          </h1>
-          <Slide y={50}>
-            <h1 className=" text-2xl text-left">
-              Care, Contribute, Cultivate.
-            </h1>
-          </Slide>
+  <div className=" h-[100vh] p-12 relative top-20">
+    {/* Desktop View */}
+    <div className=" flex justify-center gap-9">
+      <div className=" flex-[2]"></div>
+      <div className=" z-20   flex flex-col justify-center flex-[3] gap-2 ">
+        <h1 className=" text-left font-semibold text-6xl md:text-6xl lg:text-7xl xl:text-8xl">
+          Worldwide Healthcare for Disadvantaged Communities.
+        </h1>
+        <h2 className=" text-right text-2xl ">Care, Contribute, Cultivate</h2>
+        <div className=" flex justify-end">
+          <button className=" btn btn-secondary w-64 rounded-none rounded-bl-3xl rounded-tr-3xl">
+            {" "}
+            START CONTRIBUTING
+          </button>
         </div>
       </div>
+      {/* Image */}
+      <div className="  h-[100vh]  hidden sm:flex flex-col justify-center  sm:flex-[4]">
+        <div className="introimages  w-full h-[30rem] max-w-[30rem] rounded-tl-[5rem] rounded-br-[10rem]"></div>
+      </div>
     </div>
+    {/* Mobile Image */}
+    <div className=" z-0 introimages bg-pink-500  h-[20rem] w-[70%] rounded-tl-[5rem] rounded-br-[10rem] absolute sm:hidden top-[360px] "></div>
   </div>
 );
 
