@@ -49,9 +49,13 @@ export const Projects = () => {
                   </p>
                 </div>
                 <div className=" divider divider-vertical lg:divider-horizontal"></div>
-                <div className="flex-[2]">
-                  <h2 className=" text-xl ">3,000+ Surgeries Provided</h2>
-                  <h2 className=" text-xl ">3,000+ Surgeries Provided</h2>
+                <div className="flex-[2] text-xl flex flex-col gap-4">
+                  <h2>1500+ Treatments Annually</h2>
+                  <h2>50+ Years of Establishment</h2>
+                  <h2>40 Category 1 CME Hours</h2>
+                  <h2>Partnered with Hackett Hemwell Patterson Foundation</h2>
+                  <h2>Providing lifesaving care and education</h2>
+                  <h2>Building lifelong connections</h2>
                 </div>
               </div>
             </div>
@@ -64,35 +68,44 @@ export const Projects = () => {
       </Slide>
 
       {/* HONDURAS*/}
-      <div className=" bg-primary w-full min-h-96 rounded-[5rem] rounded-tl-none  flex flex-col gap-9 relative overflow-hidden group">
-        <div className=" absolute h-full w-full back bg-[url(imgs/honduras2019/22.jpg)] z-10"></div>
-        <div className=" absolute h-full w-full bg-gradient-to-b from-sky-200 to-primary/25 z-20 hover:scale-150"></div>
-        <div className=" p-12 z-30 mix-blend-hard-light">
-          <div className=" mix-blend-screen">
-            <h1 className=" text-7xl"> Honduras</h1>
-            <div className="flex flex-col md:flex-row">
-              <div className=" flex-[5]">
-                <h2 className="text-2xl md:text-3xl">
-                  This is text about honduras and the medical missions that we
-                  do. We say the care that we provide. This is text about
-                  honduras and the medical missions that we do. We say the care
-                  that we provide. This is text about honduras and the medical
-                  missions that we do. We say the care that we provide.
-                </h2>
-              </div>
-              <div className=" divider divider-vertical md:divider-horizontal"></div>
-              <div className="flex-[2]">
-                <h2 className=" text-3xl ">3,000+ Surgeries Provided</h2>
-                <h2 className=" text-3xl ">3,000+ Surgeries Provided</h2>
+      <Slide x={20} y={0}>
+        <div className=" bg-primary w-full min-h-96 rounded-[5rem] rounded-tl-none  flex flex-col gap-9 relative overflow-hidden group">
+          <div className=" absolute h-full w-full back bg-[url(imgs/vietnam/2.jpg)] z-10 bg-cover"></div>
+          <div className=" absolute h-full w-full bg-gradient-to-b from-sky-200 to-white/50 z-20 hover:scale-150"></div>
+          <div className=" py-12 px-6 md:px-12  z-30 mix-blend-hard-light">
+            <div className=" mix-blend-screen">
+              <h1 className="text-5xl md:text-7xl"> Vietnam</h1>
+              <div className="flex flex-col lg:flex-row">
+                <div className=" flex-[5]">
+                  <p className="text-md md:text-xl py-4">
+                    Through dedicated educational exchanges, Dr. Hao Bui has
+                    made strides in enhancing vascular care in Vietnam.
+                    Partnering with Cho Ray Hospital's vascular department, the
+                    country's largest hospital with over three thousand beds, we
+                    conduct annual seminars, hands-on procedures, and reciprocal
+                    exchanges for Vietnamese surgeons to gain U.S. experience.
+                    Now, collaborating with Dignity Health, we aim to expand
+                    these educational initiatives across various specialties,
+                    steadily advancing healthcare accessibility.
+                  </p>
+                </div>
+                <div className=" divider divider-vertical lg:divider-horizontal"></div>
+                <div className="flex-[2] text-xl flex flex-col gap-4">
+                  <h2>Educational Exchanges Enhancing Vascular Care</h2>
+                  <h2>Partnership with Cho Ray Hospital, Vietnam's Largest</h2>
+                  <h2>Annual Seminars and Hands-On Procedures</h2>
+                  <h2>U.S. Experience for Vietnamese Surgeons</h2>
+                  <h2>Partnered with Dignity Health</h2>
+                </div>
               </div>
             </div>
+            <button className="btn btn-neutral w-64 rounded-[5rem]  my-8">
+              {" "}
+              LEARN MORE
+            </button>
           </div>
-          <button className="btn btn-neutral w-64 rounded-[5rem] rounded-br-none">
-            {" "}
-            LEARN MORE
-          </button>
         </div>
-      </div>
+      </Slide>
     </div>
   );
 };

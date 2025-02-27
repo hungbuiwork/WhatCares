@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import cover_image from "../imgs/honduras2017/12.JPG";
 import { Slide } from "../animations/Slide.tsx";
+import { Link } from "react-scroll";
 
 const Intro = () => (
   <div className="  min-h-[calc(100vh_-_4rem)]  relative  flex flex-col justify-center">
@@ -14,10 +15,12 @@ const Intro = () => (
         </h1>
         <h2 className=" text-right text-2xl ">Care, Contribute, Cultivate</h2>
         <div className=" flex justify-end">
-          <button className="border-2 border-white btn btn-secondary w-64 rounded-none rounded-bl-3xl rounded-tr-3xl text-lg hover:scale-110">
-            {" "}
-            START CONTRIBUTING
-          </button>
+          <Link to="contribute" smooth={true} duration={500}>
+            <button className="border-2 border-white btn btn-primary w-64 rounded-none rounded-bl-3xl rounded-tr-3xl text-lg hover:scale-110">
+              {" "}
+              START CONTRIBUTING
+            </button>
+          </Link>
         </div>
       </div>
       {/* Image */}

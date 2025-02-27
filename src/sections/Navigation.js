@@ -143,7 +143,7 @@ const Navigation = () => {
                   {item.name}
                 </a>
                 {item?.dropdown && (
-                  <div className="flex-col hidden group-hover:flex absolute w-full z-20 shadow-lg rounded-sm p-2 border-l-primary border-l-2 bg-white/75 backdrop-blur-lg">
+                  <div className="flex-col flex  w-full z-20 rounded-sm p-2 border-l-primary border-l-2 bg-slate-100 backdrop-blur-lg">
                     {item.dropdown.map((sub_item) => (
                       <a
                         href={`${item.to}/${sub_item.toLowerCase()}`}

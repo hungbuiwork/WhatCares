@@ -1,6 +1,5 @@
 import React from "react";
 import { Slide } from "../animations/Slide.tsx";
-import { Action } from "../components/Action/Action.jsx";
 
 const image = require("../imgs/honduras2019/38.jpg");
 
@@ -12,17 +11,17 @@ export const About = () => {
         <div className="absolute w-full flex justify-center px-4  z-20 translate-y-[-50%]">
           <div className=" rounded-3xl    flex flex-col sm:flex-row max-w-5xl w-full p-4 border-primary border-2 bg-white">
             <div className=" flex-1 flex flex-col flex-center pt-3">
-              <h1 className=" text-4xl counter"> 792,000</h1>
-              <h2 className=" text-md"> lives saved</h2>
+              <h1 className=" text-4xl counter"> 8,000+</h1>
+              <h2 className=" text-md"> patients treated</h2>
             </div>
             <div className=" divider divider-horizontal"></div>
             <div className=" flex-1 flex flex-col flex-center  pt-3">
-              <h1 className=" text-4xl"> 310+ </h1>
-              <h2 className=" text-md"> veins donated</h2>
+              <h1 className=" text-4xl"> 2000+ </h1>
+              <h2 className=" text-md"> hours volunteered</h2>
             </div>
             <div className=" divider divider-horizontal"></div>
             <div className=" flex-1 flex flex-col flex-center pt-3">
-              <h1 className="  text-4xl"> 10+</h1>
+              <h1 className="  text-4xl"> 8+</h1>
               <h2 className=" text-md"> medical missions</h2>
             </div>
           </div>
@@ -31,12 +30,14 @@ export const About = () => {
       {/* Image */}
       <div className=" h-[26rem]  relative  bg-yellow-400  -z-10 ">
         <div className=" bg-[url(imgs/import/flood.jpg)] absolute w-full h-full bg-cover bg-center"></div>
-        <div className=" absolute bg-gradient-to-b to-white/25 from-secondary w-full h-full"></div>
-        <div className=" bg-slate-200 backdrop-blur-md absolute bottom-0 md:right-[10%] w-[min(24rem,100vw)]  h-48 text-left p-8 rounded-t-3xl border-2 border-secondary border-b-0">
+        <div className=" absolute bg-gradient-to-b to-white/25 from-primary w-full h-full"></div>
+        <div className=" bg-slate-200 backdrop-blur-md absolute bottom-0 md:right-[10%] w-[min(24rem,100vw)]  h-48 text-left p-8 rounded-t-3xl border-2 border-parimary border-b-0">
           <h1 className=" text-3xl"> Around the world </h1>
-          <div className=" divider"></div>
-          <h2 className=" text-lg"> Important Stat One</h2>
-          <h2 className=" text-lg"> Another Important Stat</h2>
+          <h2 className=" text-lg">
+            {" "}
+            70% of Vein Conditions in Low-Income Areas Go Undiagnosed &
+            Untreated
+          </h2>
         </div>
       </div>
       {/* About */}

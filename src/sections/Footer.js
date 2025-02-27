@@ -1,37 +1,56 @@
-import React from 'react'
-import {FaMailBulk, FaPhone, FaLocationArrow} from 'react-icons/fa'
+import React from "react";
+import { FaMailBulk, FaPhone, FaLocationArrow } from "react-icons/fa";
 
 export const Footer = () => {
   return (
-    <div className=' py-8 bg-blue-500 flex justify-evenly text-white flex-wrap'>
-      <div className=' mx-6 my-2'>
-        <p>
-          <a href='https://www.google.com/maps?q=4901+Centennial+Plaza+Way+Bakersfield,+CA+93312' target='_blank'>
-            <FaLocationArrow className='inline'></FaLocationArrow>
-          : 4901 Centennial Plaza Way <br></br>Bakersfield, CA 93312
+    <footer className="bg-primary text-white py-8">
+      <div className="max-w-screen-xl mx-auto px-4 flex flex-wrap justify-evenly space-y-6 sm:space-y-0">
+        {/* Address Section */}
+        <div className="flex items-center space-x-2">
+          <a
+            href="https://www.google.com/maps?q=4901+Centennial+Plaza+Way+Bakersfield,+CA+93312"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center space-x-2 hover:underline"
+            aria-label="Visit our location on Google Maps"
+          >
+            <FaLocationArrow className="text-xl" />
+            <p className="text-sm">
+              4901 Centennial Plaza Way <br />
+              Bakersfield, CA 93312
+            </p>
           </a>
-        </p>
+        </div>
+
+        {/* Phone Section */}
+        <div className="flex items-center space-x-2">
+          <a
+            href="tel:+6613878333"
+            className="flex items-center space-x-2 hover:underline"
+            aria-label="Call us"
+          >
+            <FaPhone className="text-xl" />
+            <p className="text-sm">(661) 387-8333</p>
+          </a>
+        </div>
+
+        {/* Email Section */}
+        <div className="flex items-center space-x-2">
+          <a
+            href="mailto:info@whatcares.org"
+            className="flex items-center space-x-2 hover:underline"
+            aria-label="Email us"
+          >
+            <FaMailBulk className="text-xl" />
+            <p className="text-sm">info@whatcares.org</p>
+          </a>
+        </div>
       </div>
 
-      <div className=' mx-6 my-2'>
-        <p>
-          <a href = "tel:+6613878333">
-          <FaPhone className = "inline"></FaPhone>
-          : (661)387-8333
-          </a>
-        </p>
+      {/* Footer Bottom Text */}
+      <div className="mt-6 text-center text-sm">
+        <p>&copy; 2025 What Cares. All Rights Reserved.</p>
       </div>
-
-      <div className=' mx-6 my-2'>
-        <p>
-          <a href='mailto:info@whatcares.org'>
-          <FaMailBulk className=' inline'></FaMailBulk>
-          : info@whatcares.org
-          </a>
-        </p>
-      </div>
-
-
-    </div>
-  )
-}
+    </footer>
+  );
+};
