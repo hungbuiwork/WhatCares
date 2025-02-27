@@ -14,10 +14,10 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { name: "Home", to: "mission" },
-    { name: "Projects", to: "projects" },
-    { name: "Team", to: "team" },
-    { name: "Join Us", to: "contribute" },
+    { name: "Home", to: "/" },
+    { name: "Projects", to: "/projects", dropdown: ["Honduras", "Vietnam"] },
+    { name: "Team", to: "/team" },
+    { name: "Join Us", to: "/contribute" },
   ];
 
   return (
@@ -72,29 +72,38 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                className="text-gray-800 hover:text-primary font-medium transition-colors duration-200 relative group cursor-pointer"
-              >
-                {item.name}
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200" />
-              </Link>
+              <div key={item.to} className=" relative group">
+                <a
+                  href={item.to}
+                  className="text-gray-800 hover:text-primary font-medium transition-colors duration-200 cursor-pointer"
+                >
+                  {item.name}
+                  {!item.dropdown && (
+                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200" />
+                  )}
+                </a>
+                {item?.dropdown && (
+                  <div className=" flex-col hidden group-hover:flex absolute min-w-fit  shadow-lg rounded-sm p-2 border-l-primary border-l-2">
+                    {item.dropdown.map((sub_item) => (
+                      <a
+                        href={`${item.to}/${sub_item.toLowerCase()}`}
+                        key={sub_item}
+                        className=" text-left hover:cursor-pointer hover:text-primary"
+                      >
+                        {" "}
+                        {sub_item}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
-            <Link
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
+            <a
+              href={"donate"}
               className="px-6 py-2.5 text-sm font-medium text-white bg-primary rounded-full hover:bg-primary shadow-sm hover:shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 hover:cursor-pointer"
             >
               DONATE
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -135,30 +144,37 @@ const Navigation = () => {
         >
           <div className="px-2 pt-2 pb-3 space-y-1 bg-white rounded-lg shadow-lg">
             {navItems.map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                className="block px-3 py-2 text-base font-medium text-gray-800 hover:text-primary hover:bg-blue-50 rounded-md transition-colors duration-200 cursor-pointer"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.name}
-              </Link>
+              <div key={item.to} className="relative group">
+                <a
+                  href={item.to}
+                  className="block px-3 py-2 text-base font-medium text-gray-800 hover:text-primary hover:bg-blue-50 rounded-md transition-colors duration-200 cursor-pointer"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.name}
+                </a>
+                {item?.dropdown && (
+                  <div className="flex-col hidden group-hover:flex absolute w-full z-20 shadow-lg rounded-sm p-2 border-l-primary border-l-2 bg-white/75 backdrop-blur-sm">
+                    {item.dropdown.map((sub_item) => (
+                      <a
+                        href={`${item.to}/${sub_item.toLowerCase()}`}
+                        key={sub_item}
+                        className="block px-3 py-2 text-base text-gray-800 hover:text-primary hover:bg-blue-50 rounded-md transition-colors duration-200 cursor-pointer"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {sub_item}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
-            <Link
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
+            <a
+              href="contact"
               className="block px-3 py-2 text-base font-medium text-white bg-primary hover:bg-primary rounded-md transition-colors duration-200 cursor-pointer shadow-sm"
               onClick={() => setIsOpen(false)}
             >
               Contact Us
-            </Link>
+            </a>
           </div>
         </div>
       </div>

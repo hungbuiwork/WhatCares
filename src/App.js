@@ -7,28 +7,34 @@ import { Projects } from "./sections/Projects";
 import ImageCarousel from "./components/ImageCarousel/ImageCarousel";
 import { Footer } from "./sections/Footer";
 import { Partners } from "./sections/Partners";
-import { Team } from "./sections/Team";
-import Donate from "./sections/Donate";
 import Contact from "./sections/Contact";
-import { Link } from "react-scroll";
+import Home from "./pages/Home";
+import Team from "./pages/Team";
+import Donate from "./pages/Donate";
+import Contribute from "./pages/Contribute";
+import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
 
 localStorage.theme = "light";
 
 function App() {
   return (
-    <div className="App overflow-hidden">
-      <Navigation></Navigation>
-      <div className="">
-        <Intro></Intro>
-        <About></About>
-        <Projects></Projects>
-        <Donate></Donate>
-        <Contact></Contact>
+    <BrowserRouter>
+      <div className="App overflow-hidden">
+        <Navigation></Navigation>
+        <div className=" relative top-32">
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="team" element={<Team></Team>} />
+            <Route
+              path="contribute"
+              element={<Contribute></Contribute>}
+            ></Route>
+            <Route path="donate" element={<Donate></Donate>}></Route>
+          </Routes>
+          <Footer></Footer>
+        </div>
       </div>
-      <hr></hr>
-      <Partners></Partners>
-      <Footer></Footer>
-    </div>
+    </BrowserRouter>
   );
 }
 

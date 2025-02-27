@@ -4,7 +4,7 @@ import cover_image from "../imgs/honduras2017/12.JPG";
 import { Slide } from "../animations/Slide.tsx";
 
 const Intro = () => (
-  <div className=" h-[100vh] p-12 relative top-20">
+  <div className=" border-4 border-red-700 h-[calc(100vh_-_8rem)] p-12 relative ">
     {/* Desktop View */}
     <div className=" flex justify-center gap-9">
       <div className=" flex-[2]"></div>
