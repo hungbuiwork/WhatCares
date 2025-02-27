@@ -1,5 +1,11 @@
+import { Team as TeamTemp } from "../sections/Team";
+
 const Team = () => {
-  return <div>Team Page</div>;
+  return (
+    <div>
+      <TeamTemp></TeamTemp>
+    </div>
+  );
 };
 
 export default Team;

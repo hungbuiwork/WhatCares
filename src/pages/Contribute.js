@@ -1,5 +1,10 @@
+import Contact from "../sections/Contact";
 const Contribute = () => {
-  return <div>Contribute Page</div>;
+  return (
+    <div>
+      <Contact></Contact>
+    </div>
+  );
 };
 
 export default Contribute;

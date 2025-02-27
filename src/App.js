@@ -13,18 +13,19 @@ import Team from "./pages/Team";
 import Donate from "./pages/Donate";
 import Contribute from "./pages/Contribute";
 import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
-
-localStorage.theme = "light";
+localStorage.theme = "mytheme";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App overflow-hidden">
         <Navigation></Navigation>
-        <div className=" relative top-32">
+        <div className="h-32"></div>
+        <div className=" ">
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="team" element={<Team></Team>} />
+            <Route path="projects" element={<Projects></Projects>}></Route>
             <Route
               path="contribute"
               element={<Contribute></Contribute>}

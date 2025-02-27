@@ -1,5 +1,11 @@
+import { default as DonateTemp } from "../sections/Donate";
 const Donate = () => {
-  return <div> Donate Page</div>;
+  return (
+    <div>
+      {" "}
+      <DonateTemp></DonateTemp>
+    </div>
+  );
 };
 
 export default Donate;

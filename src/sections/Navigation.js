@@ -17,22 +17,16 @@ const Navigation = () => {
     { name: "Home", to: "/" },
     { name: "Projects", to: "/projects", dropdown: ["Honduras", "Vietnam"] },
     { name: "Team", to: "/team" },
-    { name: "Join Us", to: "/contribute" },
+    // { name: "Get Involved", to: "/contribute" },
   ];
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-gradient-to-b from-white to-transparent"
-          : "bg-base-100 backdrop-blur-sm py-4"
+      className={`fixed w-full  z-50 transition-all duration-300 bg-base-100 backdrop-blur-sm  ${
+        isScrolled ? "py-2" : "py-8"
       }`}
     >
-      <div
-        className={` mx-auto px-4 sm:px-6 lg:px-8 ${
-          isScrolled ? "" : "max-w-7xl"
-        }`}
-      >
+      <div className={` mx-auto px-4 sm:px-6 lg:px-8`}>
         <div className="flex justify-between items-center">
           {/* Logo and Title Container */}
           <Link
@@ -43,26 +37,22 @@ const Navigation = () => {
             duration={500}
             className="flex items-center space-x-3 cursor-pointer group"
           >
-            <div className="w-32 rounded-lg drop-shadow-2xl ">
+            <div className=" w-24 lg:w-32 rounded-lg drop-shadow-2xl ">
               <img
                 src={require("../imgs/icons/logo.png")}
                 alt="WhatCares Logo"
                 className="group-hover:scale-105 transition-transform duration-200"
               />
             </div>
-            <div className=" flex-col hidden lg:flex">
+            <div className=" flex-col flex text-left">
               <h1
-                className={`text-6xl font-extrabold leading-tight transition-opacity duration-300 ${
-                  isScrolled ? "opacity-0" : "opacity-100"
-                }`}
+                className={` text-3xl lg:text-6xl font-extrabold leading-tight transition-opacity duration-300 `}
               >
                 <span className="text-primary">What</span>
                 <span className="text-gray-800">Cares</span>
               </h1>
               <span
-                className={`text-sm text-gray-800  font-bold transition-opacity duration-300 ${
-                  isScrolled ? "opacity-0" : "opacity-100"
-                }`}
+                className={`text-sm text-gray-800  font-bold transition-opacity`}
               >
                 World Health Access Team
               </span>
@@ -83,7 +73,7 @@ const Navigation = () => {
                   )}
                 </a>
                 {item?.dropdown && (
-                  <div className=" flex-col hidden group-hover:flex absolute min-w-fit  shadow-lg rounded-sm p-2 border-l-primary border-l-2">
+                  <div className=" flex-col hidden group-hover:flex absolute min-w-fit  shadow-lg rounded-sm p-2 border-l-primary border-l-2 bg-white">
                     {item.dropdown.map((sub_item) => (
                       <a
                         href={`${item.to}/${sub_item.toLowerCase()}`}
@@ -100,7 +90,7 @@ const Navigation = () => {
             ))}
             <a
               href={"donate"}
-              className="px-6 py-2.5 text-sm font-medium text-white bg-primary rounded-full hover:bg-primary shadow-sm hover:shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 hover:cursor-pointer"
+              className="px-6 py-2.5 text-sm font-medium text-white bg-primary rounded-full hover:scale-105 shadow-sm hover:shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 hover:cursor-pointer"
             >
               DONATE
             </a>
@@ -153,7 +143,7 @@ const Navigation = () => {
                   {item.name}
                 </a>
                 {item?.dropdown && (
-                  <div className="flex-col hidden group-hover:flex absolute w-full z-20 shadow-lg rounded-sm p-2 border-l-primary border-l-2 bg-white/75 backdrop-blur-sm">
+                  <div className="flex-col hidden group-hover:flex absolute w-full z-20 shadow-lg rounded-sm p-2 border-l-primary border-l-2 bg-white/75 backdrop-blur-lg">
                     {item.dropdown.map((sub_item) => (
                       <a
                         href={`${item.to}/${sub_item.toLowerCase()}`}

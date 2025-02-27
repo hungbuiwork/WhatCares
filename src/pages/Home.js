@@ -10,8 +10,6 @@ const Home = () => {
       <Intro></Intro>
       <About></About>
       <Projects></Projects>
-      <Donate></Donate>
-      <Contact></Contact>
     </div>
   );
 };

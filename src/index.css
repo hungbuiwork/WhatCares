@@ -29,7 +29,8 @@ h1,
 h2,
 h3,
 li {
-  font-family: "Oswald", sans-serif;
+  font-family: "Poppins", sans-serif;
+  @apply font-bold;
 }
 
 hr {
@@ -110,7 +111,13 @@ Link {
 
   .test {
     @apply bg-cover bg-center bg-no-repeat;
-    background-image: url(imgs/honduras2019/38.jpg);
+    background-image: url(imgs/honduras2019/22.jpg);
+    /* background-image: url(imgs/honduras2017/2.JPG); */
+  }
+
+  .bg-1 {
+    @apply bg-cover bg-center bg-no-repeat;
+    background-image: url(imgs/honduras2019/24.jpg);
   }
 
   @keyframes animate {
@@ -130,4 +137,29 @@ Link {
       background-image: url(imgs/honduras2017/12.JPG);
     }
   }
+}
+
+@keyframes rotate-globe {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.globe-container img {
+  animation: rotate-globe 20s linear infinite;
+}
+
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
 }

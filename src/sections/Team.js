@@ -8,17 +8,19 @@ export const Team = () => {
     <div className=" py-16">
       <a className=" relative bottom-20" id="team"></a>
       <Slide>
-        <h1 className=" text-6xl md:text-8xl  leading-tight">
-          Meet the Team
-        </h1>
+        <h1 className=" text-6xl md:text-8xl  leading-tight">Meet the Team</h1>
         <h2 className="text-2xl text-blue-500 mx-8 lead mb-8">
           Meet our dedicated and passionate medical professionals who comprise
           WHAT.
         </h2>
       </Slide>
-      <div className="flex flex-wrap justify-center">
+      <div className="flex flex-wrap justify-center gap-10 ">
         {team.map((member, i) => {
-          return <Slide key = {i}><TeamMember member={member}></TeamMember></Slide> ;
+          return (
+            <Slide key={i}>
+              <TeamMember member={member}></TeamMember>
+            </Slide>
+          );
         })}
       </div>
     </div>
