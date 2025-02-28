@@ -17,7 +17,7 @@ export const TeamMember = (props) => {
         <div className="overflow-hidden rounded-full scale-100 group-hover:scale-105 duration-150">
           <img
             src={image1}
-            className="scale-110 group-hover:scale-100 duration-300 h-full aspect-square"
+            className="scale-110 group-hover:scale-100 duration-300 aspect-square"
           ></img>
         </div>
         <div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,11 +30,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center">
           {/* Logo and Title Container */}
           <Link
-            to="main"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
+            to="/"
             className="flex items-center space-x-3 cursor-pointer group"
           >
             <div className=" w-24 lg:w-32 rounded-lg drop-shadow-2xl ">
@@ -63,37 +59,37 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <div key={item.to} className=" relative group">
-                <a
-                  href={item.to}
+                <Link
+                  to={item.to}
                   className="text-gray-800 hover:text-primary font-medium transition-colors duration-200 cursor-pointer"
                 >
                   {item.name}
                   {!item.dropdown && (
                     <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200" />
                   )}
-                </a>
+                </Link>
                 {item?.dropdown && (
                   <div className=" flex-col hidden group-hover:flex absolute min-w-fit  shadow-lg rounded-sm p-2 border-l-primary border-l-2 bg-white">
                     {item.dropdown.map((sub_item) => (
-                      <a
-                        href={`${item.to}/${sub_item.toLowerCase()}`}
+                      <Link
+                        to={`${item.to}/${sub_item.toLowerCase()}`}
                         key={sub_item}
                         className=" text-left hover:cursor-pointer hover:text-primary"
                       >
                         {" "}
                         {sub_item}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 )}
               </div>
             ))}
-            <a
-              href={"donate"}
+            <Link
+              to={"donate"}
               className="px-6 py-2.5 text-sm font-medium text-white bg-primary rounded-full hover:scale-105 shadow-sm hover:shadow-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 hover:cursor-pointer"
             >
               DONATE
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -135,36 +131,36 @@ const Navigation = () => {
           <div className="px-2 pt-2 pb-3 space-y-1 bg-white rounded-lg shadow-lg">
             {navItems.map((item) => (
               <div key={item.to} className="relative group">
-                <a
-                  href={item.to}
+                <Link
+                  to={item.to}
                   className="block px-3 py-2 text-base font-medium text-gray-800 hover:text-primary hover:bg-blue-50 rounded-md transition-colors duration-200 cursor-pointer"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
                 {item?.dropdown && (
                   <div className="flex-col flex  w-full z-20 rounded-sm p-2 border-l-primary border-l-2 bg-slate-100 backdrop-blur-lg">
                     {item.dropdown.map((sub_item) => (
-                      <a
-                        href={`${item.to}/${sub_item.toLowerCase()}`}
+                      <Link
+                        to={`${item.to}/${sub_item.toLowerCase()}`}
                         key={sub_item}
                         className="block px-3 py-2 text-base text-gray-800 hover:text-primary hover:bg-blue-50 rounded-md transition-colors duration-200 cursor-pointer"
                         onClick={() => setIsOpen(false)}
                       >
                         {sub_item}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 )}
               </div>
             ))}
-            <a
-              href="contact"
+            <Link
+              to="donate"
               className="block px-3 py-2 text-base font-medium text-white bg-primary hover:bg-primary rounded-md transition-colors duration-200 cursor-pointer shadow-sm"
               onClick={() => setIsOpen(false)}
             >
-              Contact Us
-            </a>
+              DONATE
+            </Link>
           </div>
         </div>
       </div>

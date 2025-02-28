@@ -21,7 +21,7 @@ export const About = () => {
             </div>
             <div className=" divider divider-horizontal"></div>
             <div className=" flex-1 flex flex-col flex-center pt-3">
-              <h1 className="  text-4xl"> 8+</h1>
+              <h1 className="  text-4xl"> 6+</h1>
               <h2 className=" text-md"> medical missions</h2>
             </div>
           </div>
@@ -31,7 +31,7 @@ export const About = () => {
       <div className=" h-[26rem]  relative  bg-yellow-400  -z-10 ">
         <div className=" bg-[url(imgs/import/flood.jpg)] absolute w-full h-full bg-cover bg-center"></div>
         <div className=" absolute bg-gradient-to-b to-white/25 from-primary w-full h-full"></div>
-        <div className=" bg-slate-200 backdrop-blur-md absolute bottom-0 md:right-[10%] w-[min(24rem,100vw)]  h-48 text-left p-8 rounded-t-3xl border-2 border-parimary border-b-0">
+        <div className=" bg-slate-200 backdrop-blur-md absolute bottom-0 md:right-[10%] w-[min(32rem,100vw)]  h-48 text-left p-8 rounded-t-3xl border-2 border-parimary border-b-0">
           <h1 className=" text-3xl"> Around the world </h1>
           <h2 className=" text-lg">
             {" "}

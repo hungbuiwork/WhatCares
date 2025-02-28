@@ -5,7 +5,7 @@ const Donate = () => {
     <div id="contribute" className=" relative">
       <div className="absolute w-full h-full bg-[url(imgs/import/flood.jpg)] bg-cover -z-20"></div>
       <div className=" absolute w-full h-full bg-gradient-to-b from-primary to-transparent -z-10"></div>
-      <div className="md:mx-[10%] flex flex-col gap-10 ">
+      <div className="mx-6 md:mx-[10%] flex flex-col gap-10 ">
         <h1 className=" text-5xl md:text-8xl leading-tight text-white mb-4 mt-16">
           Make a contribution
         </h1>
@@ -19,7 +19,7 @@ const Donate = () => {
         </div>
         <div className="  rounded-[4rem] rounded-tl-none p-12   bg-white drop-shadow-dark-2 text-left">
           <h1 className=" text-3xl">Donate</h1>
-          <div className=" border-2 border-slate-400 rounded-xl p-4 m-4 text-slate-600 border-l-0 border-r-0 text-md leading-snug">
+          <div className=" border-2 border-slate-400 bg-slate-100 md:p-4 md:m-4 p-2 my-8 text-slate-600 border-l-0 border-r-0 text-md leading-snug">
             WHAT is a 501(c)(3) non-profit, so all donation and contributions
             are tax deductible. All donations are 100% directed to patient
             treatment and physician education in the underserved areas. All WHAT

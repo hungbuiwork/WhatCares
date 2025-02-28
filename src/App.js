@@ -12,30 +12,48 @@ import Home from "./pages/Home";
 import Team from "./pages/Team";
 import Donate from "./pages/Donate";
 import Contribute from "./pages/Contribute";
-import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
+import DonateButton from "./components/DonateButton";
+import {
+  HashRouter as Router,
+  Route,
+  Link,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 localStorage.theme = "mytheme";
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <div className="App overflow-hidden">
         <Navigation></Navigation>
+
         <div className="h-32"></div>
-        <div className=" ">
+        <div className=" min-h-screen">
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="team" element={<Team></Team>} />
             <Route path="projects" element={<Projects></Projects>}></Route>
             <Route
+              path="projects/vietnam"
+              element={<h1 className="mt-12">Vietnam details coming soon!</h1>}
+            ></Route>
+            <Route
+              path="projects/honduras"
+              element={<h1 className="mt-12">Honduras details coming soon!</h1>}
+            ></Route>
+            <Route
               path="contribute"
               element={<Contribute></Contribute>}
             ></Route>
             <Route path="donate" element={<Donate></Donate>}></Route>
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
-          <Footer></Footer>
         </div>
+
+        <Footer></Footer>
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 

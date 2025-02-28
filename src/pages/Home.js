@@ -5,14 +5,21 @@ import Donate from "../sections/Donate";
 import Contact from "../sections/Contact";
 import CTA from "../sections/CTA";
 import Empower from "../sections/Empower";
-
+import FeaturedMedia from "../sections/FeaturedMedia";
+import DonateButton from "../components/DonateButton";
 const Home = () => {
   return (
     <div className="">
+      <DonateButton></DonateButton>
       <Intro></Intro>
       <About></About>
-      <Projects></Projects>
-      <Empower></Empower>
+      <FeaturedMedia></FeaturedMedia>
+      <div className=" z-0">
+        <Empower></Empower>
+      </div>
+      <div className=" z-20">
+        <Projects></Projects>
+      </div>
       <CTA></CTA>
     </div>
   );

@@ -3,9 +3,7 @@ import React from "react";
 const Contact = () => {
   return (
     <div className=" mt-8 mb-2" id="contact">
-      <h1 className=" text-6xl md:text-8xl mb-4 leading-tight">
-        Contact Us
-      </h1>
+      <h1 className=" text-6xl md:text-8xl mb-4 leading-tight">Contact Us</h1>
       <h3 className=" text-3xl text-blue-600">
         We look forward to hearing from you!
       </h3>
