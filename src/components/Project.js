@@ -11,7 +11,7 @@ const Project = ({
 }) => {
   return (
     <div
-      className={`bg-primary w-full min-h-96 rounded-[5rem]  flex flex-col gap-9 relative overflow-hidden group ${
+      className={`bg-primary w-full min-h-96 rounded-[5rem] text-left flex flex-col gap-9 relative overflow-hidden group ${
         flipped ? "rounded-tr-none" : "rounded-tl-none"
       }`}
     >

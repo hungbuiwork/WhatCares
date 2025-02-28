@@ -27,7 +27,7 @@ export const Projects = () => {
       </div>
 
       <div className=" flex flex-col gap-10">
-        {projects.map((project, index) => (
+        {Object.values(projects).map((project, index) => (
           <Slide key={index} x={20} y={0} className="z-30">
             <Project
               imgURL={project.imgURL}

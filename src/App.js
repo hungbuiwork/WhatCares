@@ -13,6 +13,8 @@ import Team from "./pages/Team";
 import Donate from "./pages/Donate";
 import Contribute from "./pages/Contribute";
 import DonateButton from "./components/DonateButton";
+import ProjectPage from "./components/ProjectPage";
+import projects from "./data/projects";
 import {
   HashRouter as Router,
   Route,
@@ -35,12 +37,8 @@ function App() {
             <Route path="team" element={<Team></Team>} />
             <Route path="projects" element={<Projects></Projects>}></Route>
             <Route
-              path="projects/vietnam"
-              element={<h1 className="mt-12">Vietnam details coming soon!</h1>}
-            ></Route>
-            <Route
-              path="projects/honduras"
-              element={<h1 className="mt-12">Honduras details coming soon!</h1>}
+              path="projects/:title"
+              element={<ProjectPage></ProjectPage>}
             ></Route>
             <Route
               path="contribute"
