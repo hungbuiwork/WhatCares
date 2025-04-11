@@ -2,7 +2,7 @@ const FeaturedMedia = () => {
   return (
     <div className="mt-64  justify-center">
       <div className="flex justify-center">
-        <div className="flex flex-col w-[min(90vw,720px)]  absolute translate-y-[-40%] gap-6  z-20">
+        <div className="flex flex-col w-[min(90vw,720px)]  absolute translate-y-[min(-40%,-180px)] gap-6  z-20">
           <h1 className=" text-4xl text-left">
             Empowering Communities Worldwide
           </h1>
@@ -13,7 +13,7 @@ const FeaturedMedia = () => {
           ></iframe>
         </div>
       </div>
-      <div className="w-full h-64 sm:h-[400px] relative">
+      <div className="w-full h-[300px] sm:h-[400px] relative">
         <div className=" bg-[url(imgs/import/map.avif)] absolute w-full h-full bg-cover bg-center"></div>
         <div className="absolute w-full h-full bg-gradient-to-b from-transparent to-primary"></div>
       </div>

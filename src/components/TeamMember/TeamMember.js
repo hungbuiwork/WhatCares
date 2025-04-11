@@ -8,16 +8,17 @@ export const TeamMember = (props) => {
   let image1 = member.image1;
   let image2 = member.image2;
   let desc = member.desc;
+  let images = member?.images;
   return (
     <div className=" rounded-3xl">
       <label
         for={name}
         className="flex flex-col w-60 hover:cursor-zoom-in group"
       >
-        <div className="overflow-hidden rounded-full scale-100 group-hover:scale-105 duration-150">
+        <div className="overflow-hidden rounded-full scale-100 group-hover:scale-105 duration-150 aspect-square">
           <img
             src={image1}
-            className="scale-110 group-hover:scale-100 duration-300 aspect-square"
+            className="scale-110 group-hover:scale-100 duration-300 "
           ></img>
         </div>
         <div>
@@ -46,9 +47,11 @@ export const TeamMember = (props) => {
             {cred}
             {cred && ")"}
           </h3>
-
-          <div>
-            <p className="py-4 lg:px-8 text-left">{desc}</p>
+          <div className="py-4 lg:px-8  ">
+            {images?.map((imageURL, i) => {
+              return <img src={imageURL} key={i} className=" mb-4"></img>;
+            })}{" "}
+            <p className="text-left indent-8">{desc}</p>{" "}
           </div>
         </div>
 
